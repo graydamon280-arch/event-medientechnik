@@ -1,0 +1,32 @@
+{% comment %}
+  Rendert Checklisten-Punkte aus _data/checkliste.yml, gruppiert nach
+  Phase. Mit include.modules (ein einzelnes Modul, z.B. "ton") wird
+  bereits beim Bauen der Seite auf genau dieses Modul gefiltert - für
+  feste, schlanke Gebiets-Seiten. Ohne include.modules werden ALLE
+  Punkte (inkl. "immer") mit data-module-Attribut ausgegeben - für den
+  Konfigurator, der clientseitig per JS filtert.
+{% endcomment %}
+{% for phase in site.data.phasen %}
+  {% assign items_in_phase = site.data.checkliste.items | where: "phase", phase.key %}
+  {% if include.modules %}
+    {% assign m = include.modules %}
+    {% assign visible_items = items_in_phase | where_exp: "item", "item.module contains m" %}
+  {% else %}
+    {% assign visible_items = items_in_phase %}
+  {% endif %}
+  {% if visible_items.size > 0 %}
+  <section class="checklist__phase" data-phase="{{ phase.key }}">
+    <h2>{{ phase.label }}</h2>
+    <ul>
+      {% for item in visible_items %}
+      <li data-module="{{ item.module | join: ' ' }}">
+        <label>
+          <input type="checkbox">
+          <span>{{ item.text }}</span>
+        </label>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,303 @@
+/* =========================================================
+   Event- & Medientechnik — Design-Tokens
+   Leitidee: Rack-Beschriftung / technischer Rider.
+   Dunkler Grafit statt Schwarz, warmer Amber-Akzent (Signal-
+   leuchte), Systemschrift für Robustheit, Monospace nur für
+   technische Labels (Modul-Tags, Phasen).
+   ========================================================= */
+
+:root {
+  --color-bg:          #21252A;
+  --color-surface:     #2A2F36;
+  --color-border:      #3C424B;
+  --color-text:        #ECEDEF;
+  --color-text-muted:  #9BA3AD;
+  --color-accent:      #E8A33D;
+  --color-accent-ink:  #211804;
+  --color-ok:          #4F9F6E;
+
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "Roboto Mono", Menlo, Consolas, monospace;
+
+  --radius: 4px;
+  --content-width: 640px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+a { color: var(--color-accent); }
+
+/* ---------- Header ---------- */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.site-header__nav a {
+  margin-left: 1.25rem;
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.site-header__nav a:hover { color: var(--color-accent); }
+
+/* ---------- Layout ---------- */
+
+.site-main {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+}
+
+.site-footer {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  padding: 2rem 1.25rem;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.65rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem;
+}
+
+.site-main > p:first-of-type {
+  color: var(--color-text-muted);
+}
+
+/* ---------- Modul-Karten (Startseite) ---------- */
+
+.module-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 480px) {
+  .module-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.module-card {
+  display: block;
+  padding: 1rem 1.1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--card-accent, var(--color-accent));
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.module-card__label {
+  display: block;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.module-card__count {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--card-accent, var(--color-accent));
+  margin-bottom: 0.25rem;
+}
+
+.module-card__hint {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Checkliste ---------- */
+
+.checklist__header {
+  border-top: 3px solid var(--gebiet-accent, var(--color-accent));
+  padding-top: 1rem;
+}
+
+.checklist__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.25rem;
+}
+
+.checklist__title { margin: 0 0 1rem; }
+
+.checklist__fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 480px) {
+  .checklist__fields { grid-template-columns: repeat(3, 1fr); }
+}
+
+.checklist__fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.checklist__fields input {
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.5rem 0.6rem;
+}
+
+.checklist__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.checklist__progress {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.btn {
+  font: inherit;
+  font-weight: 600;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+  cursor: pointer;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+}
+
+.checklist__body h2 {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: var(--gebiet-accent, var(--color-accent));
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+  margin-top: 1.75rem;
+}
+
+.checklist__body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checklist__body li {
+  padding: 0.5rem 0.1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.checklist__body li label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.checklist__body input[type="checkbox"] {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+  accent-color: var(--color-ok);
+}
+
+.checklist__body li.is-checked span {
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+/* ---------- Konfigurator ---------- */
+
+.configurator {
+  padding: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+}
+
+.configurator__intro {
+  margin-top: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.configurator__options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.configurator__options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.configurator__summary { display: none; }
+
+.checklist.is-filtered .configurator__form { display: none; }
+.checklist.is-filtered .configurator__summary { display: block; }
+
+.checklist.has-configurator:not(.is-filtered) .checklist__phase,
+.checklist.has-configurator:not(.is-filtered) .checklist__actions {
+  display: none;
+}
+
+.is-hidden { display: none !important; }
+
+.no-print { }

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{% assign this_gebiet = site.data.gebiete | where: "slug", page.modul | first %}
+<article class="checklist" data-checklist-id="{{ page.url }}"{% if this_gebiet %} style="--gebiet-accent: {{ this_gebiet.color }};"{% endif %}>
+  <header class="checklist__header">
+    <p class="checklist__eyebrow">Checkliste</p>
+    <h1 class="checklist__title">{{ page.title }}</h1>
+
+    <div class="checklist__fields">
+      <label>Team
+        <input type="text" name="team">
+      </label>
+      <label>Veranstaltung
+        <input type="text" name="veranstaltung">
+      </label>
+      <label>Datum
+        <input type="text" name="datum" placeholder="TT.MM.JJJJ">
+      </label>
+    </div>
+
+    <div class="checklist__actions no-print">
+      <button type="button" class="btn" onclick="window.print()">Checkliste drucken</button>
+      <button type="button" class="btn btn--ghost" data-reset-checklist>Häkchen zurücksetzen</button>
+      <span class="checklist__progress" data-checklist-progress></span>
+    </div>
+  </header>
+
+  <div class="checklist__body">
+    {{ content }}
+  </div>
+</article>

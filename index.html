@@ -1,0 +1,23 @@
+---
+title: "Konfigurator"
+layout: checklist
+---
+<div class="configurator" data-configurator>
+  <div class="configurator__form">
+    <p class="configurator__intro">Wählt aus, was für diese Veranstaltung gebraucht wird – die Checkliste zeigt danach nur die passenden Punkte (plus die immer geltenden Sicherheits- und Orga-Punkte).</p>
+    <div class="configurator__options">
+      <label><input type="checkbox" value="ton"> Ton</label>
+      <label><input type="checkbox" value="licht"> Licht</label>
+      <label><input type="checkbox" value="buehne"> Bühne</label>
+      <label><input type="checkbox" value="streaming"> Streaming / Video</label>
+      <label><input type="checkbox" value="catering"> Catering</label>
+      <label><input type="checkbox" value="stuehle"> Stühle</label>
+    </div>
+    <button type="button" class="btn no-print" data-configurator-submit>Checkliste erstellen</button>
+  </div>
+  <div class="configurator__summary">
+    <button type="button" class="btn btn--ghost no-print" data-configurator-change>Auswahl ändern</button>
+  </div>
+</div>
+
+{% include checklist-list.html %}

@@ -1,0 +1,271 @@
+# Zentrale Datenquelle für alle Checklisten-Punkte.
+# module: eine oder mehrere Kategorien. "immer" = wird unabhängig von
+# der Modul-Auswahl im Konfigurator immer angezeigt.
+# phase: vorbereitung | aufbau | durchfuehrung | abbau
+items:
+
+  # ---------- immer sichtbar (Sicherheit, Zeitplan, Orga, Kontakte) ----------
+  - id: immer-1
+    phase: vorbereitung
+    module: [immer]
+    text: "Aufgabenverteilung im Team dokumentiert (Aufgabenplan)"
+  - id: immer-2
+    phase: vorbereitung
+    module: [immer]
+    text: "Kontaktdaten aller Beteiligten vorliegend (Künstler:innen, Lehrkräfte, Technik)"
+  - id: immer-3
+    phase: vorbereitung
+    module: [immer]
+    text: "Zeitplan erstellt (Aufbau, Soundcheck, Probelauf, Abbau)"
+  - id: immer-4
+    phase: vorbereitung
+    module: [immer]
+    text: "Budget/Kostenrahmen festgelegt"
+  - id: immer-5
+    phase: aufbau
+    module: [immer]
+    text: "Kabelverlegung sicher (keine Stolperfallen)"
+  - id: immer-6
+    phase: aufbau
+    module: [immer]
+    text: "Brandschutz & Notausgänge frei"
+  - id: immer-7
+    phase: aufbau
+    module: [immer]
+    text: "Sicherheitscheckliste ausgefüllt, Fotodokumentation gemacht"
+  - id: immer-8
+    phase: aufbau
+    module: [immer]
+    text: "Stromversorgung geprüft und stabil"
+  - id: immer-9
+    phase: durchfuehrung
+    module: [immer]
+    text: "Soundcheck & Probelauf durchgeführt"
+  - id: immer-10
+    phase: durchfuehrung
+    module: [immer]
+    text: "Ablauf wird nach Zeitplan eingehalten (Protokoll geführt)"
+  - id: immer-11
+    phase: abbau
+    module: [immer]
+    text: "Alle Geräte auf Vollständigkeit geprüft"
+  - id: immer-12
+    phase: abbau
+    module: [immer]
+    text: "Rechnungen/Kostenbelege gesammelt"
+
+  # ---------- Ton (Prototyp mit vollständigen Punkten) ----------
+  - id: ton-1
+    phase: vorbereitung
+    module: [ton]
+    text: "Benötigte Ton-Geräte (Mixer, Mikrofone, Boxen) anhand der Veranstaltung festgelegt"
+  - id: ton-2
+    phase: aufbau
+    module: [ton]
+    text: "Ton-Equipment aufgebaut und verkabelt"
+  - id: ton-3
+    phase: aufbau
+    module: [ton]
+    text: "Pegel eingestellt, Rückkopplungen geprüft"
+  - id: ton-4
+    phase: aufbau
+    module: [ton]
+    text: "Ersatzmikrofone bereitgelegt"
+  - id: ton-5
+    phase: durchfuehrung
+    module: [ton]
+    text: "Tonwiedergabe klar und verzerrungsfrei (Pegel laufend geprüft)"
+  - id: ton-6
+    phase: abbau
+    module: [ton]
+    text: "Ton-Equipment sicher verstaut"
+  - id: ton-7
+    phase: abbau
+    module: [ton]
+    text: "Kabel aufgeräumt und beschriftet"
+
+  # ---------- Catering ----------
+  - id: catering-1
+    phase: vorbereitung
+    module: [catering]
+    text: "Anzahl Gäste für Catering abgeklärt"
+  - id: catering-2
+    phase: aufbau
+    module: [catering]
+    text: "Getränke/Snacks bereitgestellt, Kühlmöglichkeit vorhanden"
+  - id: catering-3
+    phase: durchfuehrung
+    module: [catering]
+    text: "Nachschub im Blick behalten"
+  - id: catering-4
+    phase: abbau
+    module: [catering]
+    text: "Reste/Müll entsorgt, Geschirr zurückgebracht"
+
+  # ---------- Stühle ----------
+  - id: stuehle-1
+    phase: vorbereitung
+    module: [stuehle]
+    text: "Anzahl benötigter Stühle/Tische geklärt"
+  - id: stuehle-2
+    phase: aufbau
+    module: [stuehle]
+    text: "Stühle aufgestellt, Fluchtwege frei gelassen"
+  - id: stuehle-3
+    phase: abbau
+    module: [stuehle]
+    text: "Stühle/Tische zurückgeräumt"
+
+  # ---------- Licht ----------
+  - id: licht-1
+    phase: vorbereitung
+    module: [licht]
+    text: "Benötigte Licht-Geräte (Scheinwerfer, Dimmer, Lichtpult) festgelegt"
+  - id: licht-2
+    phase: vorbereitung
+    module: [licht]
+    text: "Lichtstimmung/Lichtplan mit den Beteiligten abgestimmt"
+  - id: licht-3
+    phase: aufbau
+    module: [licht]
+    text: "Licht-Equipment aufgebaut und positioniert"
+  - id: licht-4
+    phase: aufbau
+    module: [licht]
+    text: "Scheinwerfer ausgerichtet und fokussiert"
+  - id: licht-5
+    phase: aufbau
+    module: [licht]
+    text: "Lichtpult programmiert, Szenen angelegt"
+  - id: licht-6
+    phase: aufbau
+    module: [licht]
+    text: "Ersatzlampen bereitgelegt"
+  - id: licht-7
+    phase: durchfuehrung
+    module: [licht]
+    text: "Ausleuchtung gleichmäßig, keine Blendung im Publikum"
+  - id: licht-8
+    phase: abbau
+    module: [licht]
+    text: "Licht-Equipment sicher verstaut, Kabel aufgeräumt und beschriftet"
+
+  # ---------- Bühne ----------
+  - id: buehne-1
+    phase: vorbereitung
+    module: [buehne]
+    text: "Bühnenmaße und Aufbauplan abgestimmt"
+  - id: buehne-2
+    phase: vorbereitung
+    module: [buehne]
+    text: "Bühnenbild/Deko geplant"
+  - id: buehne-3
+    phase: aufbau
+    module: [buehne]
+    text: "Bühnenelemente aufgebaut, Standfestigkeit geprüft"
+  - id: buehne-4
+    phase: aufbau
+    module: [buehne]
+    text: "Podeste/Traversen fachgerecht montiert"
+  - id: buehne-5
+    phase: aufbau
+    module: [buehne]
+    text: "Fluchtwege auf und neben der Bühne frei"
+  - id: buehne-6
+    phase: durchfuehrung
+    module: [buehne]
+    text: "Keine Stolperfallen auf der Bühne, Bühnenbild hält"
+  - id: buehne-7
+    phase: abbau
+    module: [buehne]
+    text: "Bühnenelemente abgebaut, Bühne besenrein hinterlassen"
+
+  # ---------- Streaming / Video ----------
+  - id: streaming-1
+    phase: vorbereitung
+    module: [streaming]
+    text: "Benötigte Kamera-/Streaming-Technik festgelegt"
+  - id: streaming-2
+    phase: vorbereitung
+    module: [streaming]
+    text: "Internetverbindung/Bandbreite am Veranstaltungsort geprüft"
+  - id: streaming-3
+    phase: vorbereitung
+    module: [streaming]
+    text: "Streaming-Plattform/Zugang vorbereitet"
+  - id: streaming-4
+    phase: aufbau
+    module: [streaming]
+    text: "Kameras aufgebaut und positioniert, Bildausschnitt geprüft"
+  - id: streaming-5
+    phase: aufbau
+    module: [streaming]
+    text: "Testübertragung erfolgreich durchgeführt"
+  - id: streaming-6
+    phase: durchfuehrung
+    module: [streaming]
+    text: "Bild- und Tonqualität im Stream laufend geprüft"
+  - id: streaming-7
+    phase: abbau
+    module: [streaming]
+    text: "Aufzeichnung gesichert, Kamera-/Streaming-Equipment verstaut"
+
+  # ---------- Netzwerk ----------
+  - id: netzwerk-1
+    phase: vorbereitung
+    module: [netzwerk]
+    text: "Benötigte Netzwerk-Infrastruktur (WLAN/LAN) festgelegt"
+  - id: netzwerk-2
+    phase: vorbereitung
+    module: [netzwerk]
+    text: "IP-Adressen/Zugangsdaten vorbereitet"
+  - id: netzwerk-3
+    phase: aufbau
+    module: [netzwerk]
+    text: "Netzwerkkabel sicher verlegt (keine Stolperfallen)"
+  - id: netzwerk-4
+    phase: aufbau
+    module: [netzwerk]
+    text: "Router/Switches aufgebaut und getestet"
+  - id: netzwerk-5
+    phase: aufbau
+    module: [netzwerk]
+    text: "WLAN-Reichweite am Einsatzort geprüft"
+  - id: netzwerk-6
+    phase: durchfuehrung
+    module: [netzwerk]
+    text: "Netzwerkverbindung stabil, laufend überwacht"
+  - id: netzwerk-7
+    phase: abbau
+    module: [netzwerk]
+    text: "Netzwerk-Equipment verstaut, Kabel aufgeräumt und beschriftet"
+
+  # ---------- Orga / Allgemein (zusätzlich zu den "immer"-Punkten) ----------
+  - id: orga-1
+    phase: vorbereitung
+    module: [orga]
+    text: "Genehmigung/Anmeldung bei der Schulleitung eingeholt"
+  - id: orga-2
+    phase: vorbereitung
+    module: [orga]
+    text: "Raumbuchung bestätigt"
+  - id: orga-3
+    phase: vorbereitung
+    module: [orga]
+    text: "Plakate/Ankündigung erstellt"
+  - id: orga-4
+    phase: aufbau
+    module: [orga]
+    text: "Einlass/Empfang organisiert"
+  - id: orga-5
+    phase: aufbau
+    module: [orga]
+    text: "Garderobe/Ablage vorbereitet"
+  - id: orga-6
+    phase: durchfuehrung
+    module: [orga]
+    text: "Einlass läuft geordnet, Ansprechperson für Fragen anwesend"
+  - id: orga-7
+    phase: abbau
+    module: [orga]
+    text: "Raum wieder in Ausgangszustand versetzt, Schlüssel zurückgegeben"

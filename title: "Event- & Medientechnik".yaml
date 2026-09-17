@@ -1,0 +1,25 @@
+title: "Event- & Medientechnik"
+description: "Checklisten und Ablaufhilfen für Event- und Medientechnik-Einsätze"
+
+# GitHub Pages: bei einem Projekt-Repo (nicht username.github.io) hier
+# "/repo-name" eintragen, sonst bleiben Links kaputt. Bei einem
+# User-/Org-Pages-Repo (username.github.io) leer lassen.
+baseurl: ""
+url: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM          # aktiviert u.a. "- [ ] Punkt"-Checklisten in Markdown
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "gebiete"
+    values:
+      layout: "checklist"
+
+exclude:
+  - README.md

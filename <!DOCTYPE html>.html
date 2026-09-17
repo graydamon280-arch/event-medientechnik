@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-header__title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="site-header__nav">
+      <a href="{{ '/' | relative_url }}">Gebiete</a>
+      <a href="{{ '/konfigurator/' | relative_url }}">Konfigurator</a>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>Event- &amp; Medientechnik · interne Arbeitsunterlage</p>
+  </footer>
+
+  <script src="{{ '/assets/js/checklist.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/configurator.js' | relative_url }}" defer></script>
+</body>
+</html>

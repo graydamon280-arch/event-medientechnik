@@ -1,0 +1,24 @@
+- slug: ton
+  title: Ton
+  color: "#E8A33D"
+  kurz: "Mikrofone, Mixer, Lautsprecher"
+- slug: licht
+  title: Licht
+  color: "#D9B44A"
+  kurz: "Scheinwerfer, Lichtpult, Effekte"
+- slug: buehne
+  title: Bühne
+  color: "#C1573D"
+  kurz: "Aufbau, Deko, Standfestigkeit"
+- slug: streaming
+  title: "Streaming / Video"
+  color: "#3D9E9E"
+  kurz: "Kamera, Übertragung, Aufzeichnung"
+- slug: netzwerk
+  title: Netzwerk
+  color: "#4A7FBF"
+  kurz: "WLAN, LAN, Verbindungen"
+- slug: orga
+  title: "Orga / Allgemein"
+  color: "#6E9C6B"
+  kurz: "Planung, Einlass, Ablauf"

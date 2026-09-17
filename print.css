@@ -1,0 +1,53 @@
+/* Druckansicht: Navigation/Footer/Buttons ausblenden, auf Papier
+   optimieren, Checkboxen als saubere Kästchen darstellen. */
+
+* {
+  background: #fff !important;
+  color: #000 !important;
+  box-shadow: none !important;
+}
+
+.site-header,
+.site-footer,
+.no-print,
+.configurator {
+  display: none !important;
+}
+
+.site-main {
+  max-width: none;
+  padding: 0;
+}
+
+.checklist__fields,
+.checklist__fields input {
+  border: 1px solid #000 !important;
+}
+
+.checklist__body h2 {
+  color: #000 !important;
+  border-top: 1px solid #000 !important;
+}
+
+.checklist__body li {
+  border-bottom: 1px solid #ccc !important;
+  break-inside: avoid;
+}
+
+.checklist__body input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 1.4px solid #000;
+  margin-top: 0.2rem;
+}
+
+a {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+@page {
+  margin: 1.5cm;
+}
